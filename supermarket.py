@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 df = pd.read_excel(
-    io="c:\\Users\\YOGI\\Downloads\\supermarkt_sales.xlsx",
+    io="supermarkt_sales.xlsx",
     engine='openpyxl',
     sheet_name='Sales',
     skiprows=3,
@@ -39,4 +39,3 @@ df_selection = df.query(
 )
 
 st.dataframe(df_selection)
-
